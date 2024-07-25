@@ -1,0 +1,71 @@
+.header {
+    color: black;
+    background-color: rgb(245, 244, 247);
+
+}
+
+.header ul {
+    margin: 0;
+}
+
+.header .topbar ul>li {
+    margin-right: 2rem;
+    font-size: 1rem;
+}
+
+.header .topbar ul>li:last-child {
+    margin: 0;
+}
+
+.header .topbar ul>li>a {
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.header .topbar .top-social-icon li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    width: 43px;
+    border-radius: 50%;
+    border: 1px solid #2a2a2a;
+}
+
+.header .topbar .top-social-icon li.active,
+.header .topbar .top-social-icon li:hover {
+    background: #0685DA;
+}
+
+.header .topbar .top-social-icon li.active a,
+.header .topbar .top-social-icon li:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.navbar-brand>span {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    letter-spacing: 1.5px;
+}
+
+.navbar-expand-lg .navbar-toggler {
+    transition: all 0.3s;
+    outline: none;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+    display: block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #2a2a2a;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    border: transparent;
+    letter-spacing: 1px;
+}
