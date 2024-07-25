@@ -8,41 +8,50 @@
     margin: 0;
 }
 
-.header .topbar ul>li {
+.topbar ul>li {
     margin-right: 2rem;
     font-size: 1rem;
 }
 
-.header .topbar ul>li:last-child {
+.topbar ul>li:last-child {
     margin: 0;
 }
 
-.header .topbar ul>li>a {
-    font-size: 1.15rem;
+.topbar ul>li>a {
+    font-size: 1.1rem;
     text-decoration: none;
+    color: #0685DA;
 }
 
-.header .topbar .top-social-icon li {
+.topbar .top-social-icon li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 43px;
-    width: 43px;
+    height: 30px;
+    width: 30px;
     border-radius: 50%;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #0685DA;
 }
 
-.header .topbar .top-social-icon li.active,
-.header .topbar .top-social-icon li:hover {
+.topbar .top-social-icon li.active,
+.topbar .top-social-icon li:hover {
     background: #0685DA;
 }
 
-.header .topbar .top-social-icon li.active a,
-.header .topbar .top-social-icon li:hover a {
+.topbar .top-social-icon li.active a,
+.topbar .top-social-icon li:hover a {
     color: #fff;
     text-decoration: none;
 }
 
+/* Sticky navbar */
+.navbar {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
 .navbar-brand>span {
     font-size: 2rem;
@@ -51,15 +60,54 @@
     letter-spacing: 1.5px;
 }
 
+.navbar-nav .nav-link{
+    position: relative;
+    display: inline-block;
+}
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    margin-top: 5px;
+    left: 0;
+    bottom: 0;
+    background: #333; /* Adjust as needed */
+    transition: width 0.3s ease, right 0.3s ease;
+}
+.navbar-nav .nav-link:hover::before {
+    width: 100%;
+    left: 0;
+}
+.navbar-nav .nav-item {
+    margin-right: 20px;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+
+.navbar-toggler>i {
+    font-size: 1.8rem;
+}
+
 .navbar-expand-lg .navbar-toggler {
     transition: all 0.3s;
     outline: none;
 }
 
-.navbar .navbar-nav .nav-item .nav-link {
+.navbar-toggler[aria-expanded="true"] {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
+.nav-item .nav-link,
+.dropdown-menu .dropdown-item {
     display: block;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #2a2a2a;
     text-transform: capitalize;
     -webkit-transition: all 0.3s ease 0s;
@@ -68,4 +116,13 @@
     transition: all 0.3s ease 0s;
     border: transparent;
     letter-spacing: 1px;
+}
+
+.dropdown-menu {
+    transition: 0.1s ease;
+    top: 100% !important
+}
+
+.dropdown-menu.show {
+    top: 60 px;
 }
